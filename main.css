@@ -1,0 +1,119 @@
+.dark{
+    --background: #0a0a0a;
+	--textColor: white;
+	--moon: #828282;
+	--moonHover: #00ffaf;
+	--moonShadow: none;
+}
+.light{
+    --background: white;
+	--textColor: black;
+	--moon: #707070;
+	--moonHover: black;
+	--moonShadow: 0 0 5px purple;
+}
+
+body,html{
+    font-size: 20px;
+    background-color: var(--background);	
+    color: var(--textColor);
+    margin: 0;
+}
+
+a{
+	outline: none;
+	text-decoration: none;
+	color: inherit;
+}
+
+.backImage{
+    width: 70%;
+	padding-left: 5%;
+}
+
+.backImage img{
+	width: 100%;
+}
+
+.backgroundBlur{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	filter: blur(100px);
+	z-index: 1;
+	display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.background{
+	width: 40%;
+    height: 30%;
+    transform: translate(40%, 90%);
+    background: #00fffff7;
+}
+
+.background2{
+	width: 40%;
+    height: 30%;
+    transform: translate(115%, 90%);
+	background: #ff0000c7;
+}
+
+.main{
+	position: relative;
+	z-index: 10;
+}
+
+.navbar{
+    display: flex;
+    height: 3rem;
+    align-items: center;
+	justify-content: space-between;
+	margin: 0 3%;
+}
+
+.navbar .navMenu{
+    z-index: 6;
+}
+
+.navbar .logo{
+	font-size: 1.8rem;
+	width: 25%;
+}
+
+.navbar .user{
+    text-align: right;
+	width: 25%;
+}
+
+.wallet{
+	border: 1px solid #a289d6;
+    padding: 5px 10px;
+    border-radius: 10px;
+	background: #523986;
+	cursor: pointer;
+}
+
+.moon{
+	cursor: pointer;
+	margin-right: 20px;
+	color: var(--moon);
+}
+.moon:hover{
+	color: var(--moonHover);
+	text-shadow: var(--moonShadow);
+}
+
+.moon i{
+	vertical-align: text-bottom;
+}
+
+.menu{
+	wdith: 50%;
+}
+
+.menuItem{
+    margin-top: 0.5rem;
+    display: block;
+}
