@@ -88,10 +88,12 @@ a{
 }
 
 .wallet{
-	border: 1px solid #a289d6;
+	border: 2px solid transparent;
     padding: 5px 10px;
     border-radius: 10px;
-	background: #523986;
+	background: linear-gradient(45deg, #3a004e, #017469, #3a004e), linear-gradient(197deg, aqua, #f600ff, aqua);
+	background-clip: padding-box, border-box;
+	background-origin: padding-box, border-box;
 	cursor: pointer;
 }
 
