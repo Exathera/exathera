@@ -4,6 +4,7 @@
 	--moon: #828282;
 	--moonHover: #00ffaf;
 	--moonShadow: none;
+	--walletText: white;
 }
 .light{
     --background: white;
@@ -11,6 +12,7 @@
 	--moon: #707070;
 	--moonHover: black;
 	--moonShadow: 0 0 5px purple;
+	--walletText: white;
 }
 
 body,html{
@@ -80,6 +82,15 @@ a{
 .navbar .logo{
 	font-size: 1.8rem;
 	width: 25%;
+	
+}
+
+.navbar .logo span{
+	background: linear-gradient(17deg, #f600ff, aqua, #f600ff);
+	background-size: 100%; /*Pripadne rozdelit na vic stejnych sekci: 25% = na kazde 2 pismena*/
+	background-clip: text;
+	-webkit-background-clip: text;
+	color: transparent;
 }
 
 .navbar .user{
@@ -88,13 +99,29 @@ a{
 }
 
 .wallet{
-	border: 2px solid transparent;
+	border: 3px solid transparent;
     padding: 5px 10px;
     border-radius: 10px;
 	background: linear-gradient(45deg, #3a004e, #017469, #3a004e), linear-gradient(197deg, aqua, #f600ff, aqua);
 	background-clip: padding-box, border-box;
 	background-origin: padding-box, border-box;
 	cursor: pointer;
+	box-sizing: border-box;
+	color: var(--walletText);
+}
+
+.wallet:hover{
+	background: linear-gradient(45deg, #1a002e, #005449, #1a002e), linear-gradient(197deg, aqua, #f600ff, aqua);
+	background-clip: padding-box, border-box;
+	background-origin: padding-box, border-box;
+}
+
+.wallet:active{
+	background: linear-gradient(45deg, #0a001e, #004439, #0a001e), linear-gradient(197deg, #00dfdf, #d600df, #00dfdf);
+	background-clip: padding-box, border-box;
+	background-origin: padding-box, border-box;
+	/*border-width: 1px;
+	padding: 7px 12px;*/
 }
 
 .moon{
@@ -109,6 +136,10 @@ a{
 
 .moon i{
 	vertical-align: text-bottom;
+	background: linear-gradient(45deg, #be00ff, #00ffe6, #be00ff);
+	background-clip: text;
+	-webkit-background-clip: text;
+	color: transparent;
 }
 
 .menu{
